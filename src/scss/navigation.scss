@@ -1,0 +1,76 @@
+/*----------- HEADER --------------*/
+header {padding: .5rem 2%;}
+header h1 {margin: 0; font-family: 'Archivo Black', sans-serif; text-align: center}
+header h2 {margin: 0; font-weight: normal; font-family: 'Exo', sans-serif; text-align: center}
+header figure.logo { margin: 0}
+header div.main-header { width: 90%}
+header div.menu-button { width: 10%}
+header div.menu-button button {
+    background-color: #004C70;
+    border: none;
+    font-size: 1.6rem;
+    color: white;
+    border: 1px solid black;
+}
+
+header, header div.main-header {
+    display: flex;
+    justify-content: center;
+}
+
+/*----------- NAVIGATION --------------*/
+
+nav {
+    background-color: #004C70;
+    border-radius: 5px;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    font-family: 'Exo', sans-serif;
+}
+
+nav ul li a {
+    display: block;
+    padding: .8rem 2%;
+    text-decoration: none;
+    color: white;
+    border-top: 1px solid rgba(0,0, 0, 0.3);
+}
+
+
+nav ul li.active a {
+    background-color: #4855c6;;
+}
+
+nav ul li a:hover {
+    background-color: #0e77a8;
+}
+
+/* from small view to medium view changing/breaking at ~600px */
+@media only screen and (min-width: 37.5em) {
+
+    /*----------- MANAGE DISPLAY --------------*/
+
+    /* Show Navbar */
+    nav ul.hide {display: flex;}
+       
+    /*----------- HEADER --------------*/
+    header div.menu-button { display: none; }
+    header div.main-header { width: 100%}
+    header div.site-title { width: 100%}
+    header h2 { margin-left: 0; }
+
+    /*----------- NAVIGATION --------------*/
+    nav ul { margin-left: 1%;}
+    nav ul li a {
+        border: none; 
+        border-right: 1px solid rgba(0,0,0,0.3);
+        padding: .8rem 1rem;
+    }   
+}
